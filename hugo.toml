@@ -1,0 +1,44 @@
+baseURL = "https://regnorm.ru/"
+theme = "PaperMod"
+defaultContentLanguage = "ru"
+title = "regnorm — справочники по ОТ/ПБ"
+
+# Разрешаем секции/таксономии для блога
+disableKinds = ["RSS","robotsTXT"] 
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowShareButtons = true
+  ShowCodeCopyButtons = true
+  mainSections = ["blog"]
+[params.homeInfoParams]
+  Title = "Всё по охране труда — всегда под рукой"
+  Content = """
+<a id="download"></a>Справочники ОТ/ПБ, офлайн-доступ и быстрый поиск.  
+
+[👉 Скачать в Google Play](https://play.google.com/store/apps/developer?id=b8o) · [👉 Скачать в RuStore](https://www.rustore.ru/)
+"""
+
+# Поиск (нужен JSON вывод)
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    name = "Блог"
+    url = "/blog/"
+    weight = 10
+  [[menu.main]]
+    name = "Скачать"
+    url = "/#download"
+    weight = 20
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      hardWraps = true
+
