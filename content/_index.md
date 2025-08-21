@@ -78,32 +78,29 @@ teaser_image: "images/hero.png"   # ← вот это ключ для hero-ка�
 
 Расскажите, какие правила вы используете и какие задачи хотите закрыть — мы подготовим персональную демонстрацию.
 
-<form id="contact-form" action="https://formspree.io/f/mgvzbyne" method="POST" accept-charset="UTF-8" class="grid gap-4 md:gap-5 pb-10">
-  <div class="grid grid-cols-1 md:grid-cols-2 md:gap-6">
-    <div class="border-t border-teal-500 pt-2">
-      <input type="text" id="name" name="name" placeholder="Имя" required
-        class="appearance-none bg-transparent border-none text-gray-800 py-2 px-2 leading-tight focus:outline-none w-full">
+<form action="https://formspree.io/f/mgvzbyne" method="POST" id="contact-form" class="contact-form">
+  <div class="grid">
+    <div class="field">
+      <label for="name">Имя</label>
+      <input id="name" name="name" type="text" required>
     </div>
-    <div class="border-t border-teal-500 pt-2">
-      <input type="email" id="email" name="email" placeholder="Почта" required
-        class="appearance-none bg-transparent border-none text-gray-800 py-2 px-2 leading-tight focus:outline-none w-full">
+    <div class="field">
+      <label for="email">Почта</label>
+      <input id="email" name="email" type="email" required>
     </div>
   </div>
 
-  <div class="border-t border-teal-500 pt-2">
-    <textarea id="message" name="message" rows="6" placeholder="Сообщение" required
-      class="appearance-none w-full bg-transparent text-gray-800 py-2 px-2 leading-tight focus:outline-none"></textarea>
+  <div class="field">
+    <label for="message">Сообщение</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
   </div>
 
   <!-- honeypot -->
-  <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+  <input type="text" name="company" tabindex="-1" autocomplete="off" class="hp">
 
-  <div class="md:text-center">
-    <button type="submit" class="button button-primary w-full md:w-auto rounded-lg px-5 py-4 bg-teal-500 hover:bg-teal-600 md:text-lg text-white font-semibold leading-tight shadow-md">
-      Отправить ✉️
-    </button>
-  </div>
+  <button type="submit" class="btn-primary">Отправить ✉️</button>
 </form>
+
 
 ---
 

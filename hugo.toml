@@ -8,12 +8,14 @@ disableKinds = ["RSS","robotsTXT"]
 
 [params]
   defaultTheme = "auto"
+  disableThemeToggle = false
   ShowReadingTime = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowShareButtons = true
   ShowCodeCopyButtons = true
   mainSections = ["blog"]
+  
 [params.homeInfoParams]
   Title = "Всё по охране труда — всегда под рукой"
   Content = """
@@ -41,4 +43,3 @@ disableKinds = ["RSS","robotsTXT"]
     [markup.goldmark.renderer]
       unsafe = true
       hardWraps = true
-
